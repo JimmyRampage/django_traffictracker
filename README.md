@@ -70,11 +70,10 @@ Instrucciones sobre cómo desplegar esto en un sistema en vivo o ambiente de pro
 
 Explica qué tecnologías usaste para construir este proyecto. Aquí algunos ejemplos:
 
-- [Ruby](https://www.ruby-lang.org/es/) - El lenguaje utilizado
-- [Ruby on Rails](https://rubyonrails.org) - El framework web utilizado
-- [Ruby gems](https://rubygems.org) - Gestión de dependencias
+- [Python](https://www.python.org) - El lenguaje utilizado
+- [Django](https://www.djangoproject.com) - El framework utilizado
 - [Postgresql](https://www.postgresql.org) - Sistema de base de datos
-- [Bulma IO](https://bulma.io) - Framework de CSS
+- [Boostrap](https://getbootstrap.com) - Framework de CSS
 
 ## Contribuyendo 🖇️
 
