@@ -10,10 +10,11 @@ from .forms import ContactFormForm
 
 # Create your views here.
 def index(request):
-    flanes = Flan.objects.all()
-    flanes_pub = Flan.objects.filter(is_private=False)
-    flanes_priv = Flan.objects.filter(is_private=True)
-    return render(request, "index.html", {"flanes_pub": flanes_pub})
+    if request.user.is_authenticated:
+        flans = Flan.objects.all()
+    else:
+        flans = Flan.objects.filter(is_private=False)
+    return render(request, "index.html", {"flans": flans})
 
 def about(request):
     return render(request, "about.html", {})
