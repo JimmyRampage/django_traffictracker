@@ -1,5 +1,8 @@
 {% extends "static_base.html" %}
 
+{% block navbar %}
+{% endblock %}
+
 {% block content %}
 
   {% if form.errors %}
@@ -21,18 +24,13 @@
         <form class="p-md-4 border rounded-3 bg-body-tertiary" data-bitwarden-watching="1" method="post" action="{% url 'login' %}">
           {% csrf_token %}
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" name="username">
+            <input type="text" class="form-control" id="floatingInput" name="username" placeholder="Username">
             <label for="floatingInput">Username</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" name="password">
+            <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
             <label for="floatingPassword">Password</label>
           </div>
-          <!-- <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </div> -->
           <button class="w-100 btn btn-lg btn-primary" type="submit">Log In</button>
           <input type="hidden" name="next" value="{{ next }}">
           <hr class="my-4">

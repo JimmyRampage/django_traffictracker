@@ -1,0 +1,15 @@
+{% extends 'static_base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row m-4 align-items-center">
+        <div class="col">
+            <img src="{{ flan.image_url }}" class="img-fluid" alt="{{ flan.slug }}">
+        </div>
+        <div class="col">
+            <p>{{ flan.recipe }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

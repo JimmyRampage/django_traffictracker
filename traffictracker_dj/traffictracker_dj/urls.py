@@ -17,15 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from static_pages.views import index, about, contact, success
-from static_pages.views import Welcome
+from static_pages.views import index, about, contact, success, welcome, flan_recipe
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name="index"),
-    path("about", about, name="about"),
-    path("contact", contact, name="contact"),
-    path("success", success, name="success"),
-    path("welcome", Welcome.as_view(), name="welcome"),
+    path("about/", about, name="about"),
+    path("contact/", contact, name="contact"),
+    path("success/", success, name="success"),
+    path("welcome/", welcome, name="welcome"),
+    path("recipe/<slug:slug>/", flan_recipe, name="flan_recipe"),
     path("accounts/", include('django.contrib.auth.urls')),
 ]
+# path('getting-started/<slug:prglangcat_slug>/<slug:prg_slug>', views.programmingLanguageTutorial, name="tutorial-page"),
